@@ -99,9 +99,9 @@ Add(Ini,14284612,833,126)
  Type=1
  Point(onSectionData)
  Point(doSectionData)
- link(onSectionData,1332:doCase,[])
+ link(onSectionData,11282865:doReplace,[])
 }
-Add(Replace,14895232,1001,210)
+Add(Replace,14895232,1050,210)
 {
  SubStr="\r\n"
  DestStr=" "
@@ -227,7 +227,7 @@ Add(Hub,14099250,175,231)
  link(onEvent1,16587980:doAdd,[])
  link(onEvent2,15952882:doAdd,[(203,244)(203,377)])
 }
-Add(StrList,8486455,1001,133)
+Add(StrList,8486455,1050,133)
 {
 }
 Add(Hub,7487175,595,364)
@@ -261,23 +261,23 @@ Add(GlobalVar,7684344,357,84)
  Name="pathcomp"
  Data=String(comp)
 }
-Add(FormatStr,5739677,1148,196)
+Add(FormatStr,5739677,1197,196)
 {
  DataCount=4
  Mask="%1\%2.exe %3-%4 "
  Point(FString)
  link(Str1,2963946:Var,[])
- link(Str2,3437572:Value,[(1161,163)(1036,163)(1036,256)(839,256)])
- link(Str3,15285949:Value,[(1168,155)(1103,155)(1103,261)(1063,261)])
- link(Str4,15914489:Right,[(1175,185)(797,185)])
+ link(Str2,3437572:Value,[(1210,163)(1036,163)(1036,256)(839,256)])
+ link(Str3,15285949:Value,[(1217,155)(1152,155)(1152,261)(1112,261)])
+ link(Str4,15914489:Right,[(1224,185)(797,185)])
 }
 Add(Memory,3437572,833,210)
 {
  link(onData,1766738:doEvent1,[])
 }
-Add(Memory,15285949,1057,210)
+Add(Memory,15285949,1106,210)
 {
- link(onData,5739677:doString,[(1098,216)(1098,202)])
+ link(onData,5739677:doString,[(1147,216)(1147,202)])
 }
 Add(Hub,15299499,441,238)
 {
@@ -318,7 +318,7 @@ Add(StrPart,15914489,791,133)
  Point(Right)
  link(onPart,14284612:doSectionData,[])
 }
-Add(GlobalVar,2963946,1148,63)
+Add(GlobalVar,2963946,1197,63)
 {
  Name="pathcomp"
  Data=String(comp)
@@ -340,18 +340,18 @@ Add(Hub,1503176,686,168)
  OutCount=1
  link(onEvent1,14087902:doGetString,[])
 }
-Add(StrCat,4102628,1211,252)
+Add(StrCat,4102628,1260,252)
 {
- link(onStrCat,272112:doEvent1,[(1252,258)(1252,223)])
- link(Str1,1638113:Var3,[(1217,240)])
- link(Str2,16587980:String,[(1224,115)(382,115)(382,288)(244,288)])
+ link(onStrCat,272112:doEvent1,[(1301,258)(1301,223)])
+ link(Str1,1638113:Var3,[(1266,240)])
+ link(Str2,16587980:String,[(1273,115)(382,115)(382,288)(244,288)])
 }
-Add(StrCat,6578797,1148,308)
+Add(StrCat,6578797,1197,308)
 {
- link(onStrCat,272112:doEvent2,[(1257,314)(1257,230)])
+ link(onStrCat,272112:doEvent2,[(1306,314)(1306,230)])
  link(Str1,1638113:Var2,[])
 }
-Add(GetDataEx,1638113,1148,235)
+Add(GetDataEx,1638113,1197,235)
 {
  link(Data,5739677:FString,[])
 }
@@ -360,22 +360,22 @@ Add(DoData,13459605,630,364)
  Data=Integer(3)
  link(onEventData,1503176:doEvent2,[(673,370)(673,181)])
 }
-Add(Hub,272112,1267,217)
+Add(Hub,272112,1316,217)
 {
  InCount=2
  link(onEvent1,2918078:doEvent2,[])
- link(onEvent2,8486455:doClear,[(1291,230)(1291,109)(992,109)(992,146)])
+ link(onEvent2,8486455:doClear,[(1340,230)(1340,109)(1041,109)(1041,146)])
 }
 Add(DoData,15560217,616,221)
 {
  Data=Integer(1)
  link(onEventData,1503176:doEvent3,[(677,227)(677,188)])
 }
-Add(Hub,103431,966,161)
+Add(Hub,103431,1015,161)
 {
  InCount=2
  OutCount=1
- link(onEvent1,8486455:doAdd,[(985,167)(985,139)])
+ link(onEvent1,8486455:doAdd,[(1034,167)(1034,139)])
 }
 Add(Hub,9530428,826,336)
 {
@@ -384,7 +384,7 @@ Add(Hub,9530428,826,336)
  link(onEvent2,1766738:doEvent2,[(884,349)(884,223)])
  link(onEvent3,3501509:doEvent2,[(889,356)(889,265)])
 }
-Add(Hub,3501509,973,252)
+Add(Hub,3501509,1022,252)
 {
  InCount=2
  OutCount=1
@@ -440,11 +440,11 @@ Add(CheckBox,7049416,567,252)
  Ctl3D=0
  Caption="draft"
 }
-Add(WinExec,4464460,1379,210)
+Add(WinExec,4464460,1428,210)
 {
  Param="cmd"
 }
-Add(ChildForm,2391399,1365,287)
+Add(ChildForm,2391399,1414,287)
 {
 }
 BEGIN_SDK
@@ -477,7 +477,7 @@ BEGIN_SDK
    link(Str,10903150:Data1,[(160,63)(27,63)])
   }
 END_SDK
-Add(Hub,1766738,959,210)
+Add(Hub,1766738,1008,210)
 {
  InCount=2
  OutCount=1
@@ -494,7 +494,7 @@ Add(GlobalVar,14487960,735,0)
  Name="pathsdk"
  Data=String(sdk)
 }
-Add(Hub,2918078,1323,210)
+Add(Hub,2918078,1372,210)
 {
  InCount=2
  OutCount=1
@@ -582,21 +582,27 @@ Add(Hub,11224024,903,35)
  OutCount=1
  link(onEvent1,2918078:doEvent1,[(1301,41)(1301,216)])
 }
-Add(Case,1332,875,133)
+Add(Case,1332,924,133)
 {
  Value=String()
  link(onNextCase,9643496:doStrCat,[])
 }
-Add(StrCat,9643496,917,133)
+Add(StrCat,9643496,966,133)
 {
  Str1="-"
- link(onStrCat,103431:doEvent1,[(957,139)(957,167)])
+ link(onStrCat,103431:doEvent1,[(1006,139)(1006,167)])
 }
 Add(Label,16159088,7,70)
 {
- Left=225
+ Left=135
  Top=418
- Width=37
+ Width=129
  Height=17
- Caption="v 0.9.2"
+ Caption="Created by Graff46 v 0.9.3"
+}
+Add(Replace,11282865,875,133)
+{
+ SubStr="="
+ DestStr=" "
+ link(onReplace,1332:doCase,[])
 }
