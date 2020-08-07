@@ -5,7 +5,7 @@ Add(MainForm,2953706,7,21)
  Left=10
  Top=100
  Width=271
- Height=457
+ Height=461
  Ctl3D=0
  Caption="SDK_GUI"
  BorderStyle=3
@@ -26,7 +26,7 @@ Add(Button,11367918,483,168)
 }
 Add(Button,9726664,484,221)
 {
- Top=325
+ Top=320
  Width=205
  Enabled=1
  Ctl3D=0
@@ -38,7 +38,7 @@ Add(Button,9726664,484,221)
 }
 Add(Button,2871973,481,306)
 {
- Top=350
+ Top=345
  Width=265
  Enabled=1
  Ctl3D=0
@@ -50,7 +50,7 @@ Add(Button,2871973,481,306)
 }
 Add(Button,8443243,483,364)
 {
- Top=375
+ Top=370
  Width=265
  Ctl3D=0
  Caption="Spawn"
@@ -60,7 +60,7 @@ Add(Button,8443243,483,364)
 }
 Add(Button,5348494,480,431)
 {
- Top=400
+ Top=395
  Width=265
  Enabled=1
  Ctl3D=0
@@ -93,15 +93,15 @@ Add(Button,15157081,567,49)
  Flat=0
  link(onClick,5360231:doEvent1,[])
 }
-Add(Ini,14284612,840,126)
+Add(Ini,14284612,833,126)
 {
  FileName="guiconf.ini"
  Type=1
  Point(onSectionData)
  Point(doSectionData)
- link(onSectionData,103431:doEvent1,[])
+ link(onSectionData,1332:doCase,[])
 }
-Add(Replace,14895232,966,210)
+Add(Replace,14895232,1001,210)
 {
  SubStr="\r\n"
  DestStr=" "
@@ -110,9 +110,9 @@ Add(Replace,14895232,966,210)
 }
 Add(ListBox,16587980,217,231)
 {
- Top=55
+ Top=50
  Width=265
- Height=230
+ Height=235
  Ctl3D=1
  Point(String)
  link(onClick,11503659:doData,[])
@@ -227,7 +227,7 @@ Add(Hub,14099250,175,231)
  link(onEvent1,16587980:doAdd,[])
  link(onEvent2,15952882:doAdd,[(203,244)(203,377)])
 }
-Add(StrList,8486455,966,133)
+Add(StrList,8486455,1001,133)
 {
 }
 Add(Hub,7487175,595,364)
@@ -261,23 +261,23 @@ Add(GlobalVar,7684344,357,84)
  Name="pathcomp"
  Data=String(comp)
 }
-Add(FormatStr,5739677,1113,196)
+Add(FormatStr,5739677,1148,196)
 {
  DataCount=4
  Mask="%1\%2.exe %3-%4 "
  Point(FString)
  link(Str1,2963946:Var,[])
- link(Str2,3437572:Value,[(1126,163)(1036,163)(1036,256)(839,256)])
- link(Str3,15285949:Value,[(1133,155)(1068,155)(1068,261)(1028,261)])
- link(Str4,15914489:Right,[(1140,185)(797,185)])
+ link(Str2,3437572:Value,[(1161,163)(1036,163)(1036,256)(839,256)])
+ link(Str3,15285949:Value,[(1168,155)(1103,155)(1103,261)(1063,261)])
+ link(Str4,15914489:Right,[(1175,185)(797,185)])
 }
 Add(Memory,3437572,833,210)
 {
  link(onData,1766738:doEvent1,[])
 }
-Add(Memory,15285949,1022,210)
+Add(Memory,15285949,1057,210)
 {
- link(onData,5739677:doString,[(1063,216)(1063,202)])
+ link(onData,5739677:doString,[(1098,216)(1098,202)])
 }
 Add(Hub,15299499,441,238)
 {
@@ -318,7 +318,7 @@ Add(StrPart,15914489,791,133)
  Point(Right)
  link(onPart,14284612:doSectionData,[])
 }
-Add(GlobalVar,2963946,1113,63)
+Add(GlobalVar,2963946,1148,63)
 {
  Name="pathcomp"
  Data=String(comp)
@@ -328,11 +328,6 @@ Add(Hub,13411883,525,221)
  OutCount=3
  link(onEvent1,15560217:doData,[])
  link(onEvent2,12012268:doWork1,[(553,234)(553,300)])
-}
-Add(StrCat,2713508,910,133)
-{
- Str1="-"
- link(onStrCat,8486455:doAdd,[])
 }
 Add(Hub,7623429,644,168)
 {
@@ -345,18 +340,18 @@ Add(Hub,1503176,686,168)
  OutCount=1
  link(onEvent1,14087902:doGetString,[])
 }
-Add(StrCat,4102628,1176,252)
+Add(StrCat,4102628,1211,252)
 {
- link(onStrCat,272112:doEvent1,[(1240,258)(1240,223)])
- link(Str1,1638113:Var3,[(1182,240)(1182,240)])
- link(Str2,16587980:String,[(1189,115)(382,115)(382,288)(244,288)])
+ link(onStrCat,272112:doEvent1,[(1252,258)(1252,223)])
+ link(Str1,1638113:Var3,[(1217,240)])
+ link(Str2,16587980:String,[(1224,115)(382,115)(382,288)(244,288)])
 }
-Add(StrCat,6578797,1113,308)
+Add(StrCat,6578797,1148,308)
 {
- link(onStrCat,272112:doEvent2,[(1248,314)(1248,230)])
+ link(onStrCat,272112:doEvent2,[(1257,314)(1257,230)])
  link(Str1,1638113:Var2,[])
 }
-Add(GetDataEx,1638113,1113,235)
+Add(GetDataEx,1638113,1148,235)
 {
  link(Data,5739677:FString,[])
 }
@@ -365,31 +360,31 @@ Add(DoData,13459605,630,364)
  Data=Integer(3)
  link(onEventData,1503176:doEvent2,[(673,370)(673,181)])
 }
-Add(Hub,272112,1274,217)
+Add(Hub,272112,1267,217)
 {
  InCount=2
- link(onEvent1,10087983:doValue,[])
- link(onEvent2,8486455:doClear,[(1299,230)(1299,102)(954,102)(954,146)])
+ link(onEvent1,2918078:doEvent2,[])
+ link(onEvent2,8486455:doClear,[(1291,230)(1291,109)(992,109)(992,146)])
 }
 Add(DoData,15560217,616,221)
 {
  Data=Integer(1)
  link(onEventData,1503176:doEvent3,[(677,227)(677,188)])
 }
-Add(Hub,103431,889,133)
+Add(Hub,103431,966,161)
 {
  InCount=2
  OutCount=1
- link(onEvent1,2713508:doStrCat,[])
+ link(onEvent1,8486455:doAdd,[(985,167)(985,139)])
 }
 Add(Hub,9530428,826,336)
 {
  OutCount=3
- link(onEvent1,103431:doEvent2,[(878,342)(878,146)])
+ link(onEvent1,103431:doEvent2,[(878,342)(878,174)])
  link(onEvent2,1766738:doEvent2,[(884,349)(884,223)])
  link(onEvent3,3501509:doEvent2,[(889,356)(889,265)])
 }
-Add(Hub,3501509,938,252)
+Add(Hub,3501509,973,252)
 {
  InCount=2
  OutCount=1
@@ -440,16 +435,16 @@ END_SDK
 Add(CheckBox,7049416,567,252)
 {
  Left=220
- Top=325
+ Top=320
  Width=40
  Ctl3D=0
  Caption="draft"
 }
-Add(WinExec,4464460,1428,210)
+Add(WinExec,4464460,1365,210)
 {
  Param="cmd"
 }
-Add(ChildForm,2391399,1246,427)
+Add(ChildForm,2391399,1365,287)
 {
 }
 BEGIN_SDK
@@ -482,11 +477,7 @@ BEGIN_SDK
    link(Str,10903150:Data1,[(160,63)(27,63)])
   }
 END_SDK
-Add(Memory,10087983,1323,217)
-{
- link(onData,2918078:doEvent2,[])
-}
-Add(Hub,1766738,924,210)
+Add(Hub,1766738,959,210)
 {
  InCount=2
  OutCount=1
@@ -503,7 +494,7 @@ Add(GlobalVar,14487960,735,0)
  Name="pathsdk"
  Data=String(sdk)
 }
-Add(Hub,2918078,1386,210)
+Add(Hub,2918078,1323,210)
 {
  InCount=2
  OutCount=1
@@ -575,9 +566,6 @@ Add(GetDataEx,9713746,294,42)
  Angle=1
  link(Data,43009:Var1,[])
 }
-Add(Message,16156311,140,427)
-{
-}
 Add(Hub,5360231,623,49)
 {
  link(onEvent1,1350584:doData,[])
@@ -592,5 +580,23 @@ Add(Hub,11224024,903,35)
 {
  InCount=2
  OutCount=1
- link(onEvent1,2918078:doEvent1,[(1370,41)(1370,216)])
+ link(onEvent1,2918078:doEvent1,[(1301,41)(1301,216)])
+}
+Add(Case,1332,875,133)
+{
+ Value=String()
+ link(onNextCase,9643496:doStrCat,[])
+}
+Add(StrCat,9643496,917,133)
+{
+ Str1="-"
+ link(onStrCat,103431:doEvent1,[(957,139)(957,167)])
+}
+Add(Label,16159088,7,70)
+{
+ Left=225
+ Top=418
+ Width=37
+ Height=17
+ Caption="v 0.9.1"
 }
