@@ -425,7 +425,7 @@ BEGIN_SDK
   }
   Add(Memory,13573790,378,315)
   {
-   Default=String(draft)
+   Default=String(-draft)
   }
   Add(Memory,10433454,343,315)
   {
@@ -440,7 +440,7 @@ Add(CheckBox,7049416,567,252)
  Ctl3D=0
  Caption="draft"
 }
-Add(WinExec,4464460,1365,210)
+Add(WinExec,4464460,1379,210)
 {
  Param="cmd"
 }
