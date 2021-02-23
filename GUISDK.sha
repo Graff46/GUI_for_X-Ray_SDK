@@ -589,7 +589,7 @@ Add(Label,16159088,7,70)
  Top=418
  Width=129
  Height=17
- Caption="Created by Graff46 v 0.9.3"
+ Caption="Created by Graff46 v 0.9.5"
 }
 Add(Replace,11282865,938,133)
 {
@@ -656,7 +656,7 @@ Add(CheckBox,709307,588,413)
  Left=210
  Top=395
  Ctl3D=0
- Caption="No Sun"
+ Caption="No sun"
 }
 Add(MultiElement,6082876,588,455)
 {
