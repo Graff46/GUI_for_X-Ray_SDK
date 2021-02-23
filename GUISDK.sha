@@ -155,31 +155,9 @@ BEGIN_SDK
    link(doAdd,15583862:doAdd,[(101,54)(101,132)])
    link(Text,10537236:Value,[(47,223)(184,223)(184,359)(321,359)])
   }
-  Add(MainForm,16266255,56,126)
-  {
-   Left=35
-   Top=105
-   Width=224
-   Height=239
-   Visible=1
-   BorderStyle=3
-   Point(doVisible)
-  }
-  Add(ListBox,15583862,182,126)
-  {
-   Top=100
-   Width=218
-   Align=2
-   Ctl3D=1
-   WinStyle=2
-   DataType=1
-   Point(onDblClick)
-   Point(String)
-   link(onDblClick,13633417:doAdd,[])
-  }
   Add(Button,1066959,28,315)
   {
-   Top=180
+   Top=228
    Width=218
    Height=30
    Align=4
@@ -188,11 +166,23 @@ BEGIN_SDK
    Flat=0
    link(onClick,11819079:doEvent1,[])
   }
+  Add(MainForm,16266255,56,126)
+  {
+   Left=35
+   Top=105
+   Width=224
+   Height=287
+   Visible=1
+   Caption="Selected locations"
+   BorderStyle=3
+   Point(doVisible)
+  }
   Add(ListBox,13633417,266,140)
   {
+   Top=118
    Width=218
-   Height=100
-   Align=2
+   Height=110
+   Align=4
    Ctl3D=1
    WinStyle=2
    DataType=1
@@ -221,6 +211,27 @@ BEGIN_SDK
   {
    link(onEvent1,8987220:doReplace,[])
    link(onEvent2,16266255:doClose,[(96,328)(96,268)(13,268)(13,153)])
+  }
+  Add(Label,14110782,7,210)
+  {
+   Width=218
+   Height=17
+   Align=2
+   Caption="Dbl click for select and remove"
+   Alignment=2
+  }
+  Add(ListBox,15583862,182,126)
+  {
+   Top=18
+   Width=218
+   Height=100
+   Align=4
+   Ctl3D=1
+   WinStyle=2
+   DataType=1
+   Point(onDblClick)
+   Point(String)
+   link(onDblClick,13633417:doAdd,[])
   }
 END_SDK
 Add(Hub,14099250,175,231)
@@ -444,20 +455,20 @@ BEGIN_SDK
    EventCount=1
    WorkCount=1
    DataCount=1
-   link(doWork1,9843780:doAdd,[(87,27)(87,111)])
+   link(doWork1,6385971:doEvent1,[(35,27)(35,104)])
   }
-  Add(MainForm,11783314,56,147)
+  Add(MainForm,11783314,196,21)
   {
    Left=35
    Top=105
    Width=422
    Visible=1
-   Enabled=1
    Ctl3D=0
    WinStyle=2
    BorderStyle=3
    Position=1
    ShiftLeft=200
+   Point(doVisible)
   }
   Add(Memo,9843780,154,105)
   {
@@ -466,6 +477,16 @@ BEGIN_SDK
    Align=5
    link(onChange,10903150:onEvent1,[(254,111)(254,27)])
    link(Str,10903150:Data1,[(160,63)(27,63)])
+  }
+  Add(Memory,13438238,105,49)
+  {
+   Default=Integer(1)
+   link(onData,11783314:doVisible,[])
+  }
+  Add(Hub,6385971,49,98)
+  {
+   link(onEvent1,13438238:doValue,[(84,104)(84,55)])
+   link(onEvent2,9843780:doAdd,[])
   }
 END_SDK
 Add(Hub,1766738,1071,210)
@@ -589,7 +610,7 @@ Add(Label,16159088,7,70)
  Top=418
  Width=129
  Height=17
- Caption="Created by Graff46 v 0.9.5"
+ Caption="Created by Graff46 v 0.9.6"
 }
 Add(Replace,11282865,938,133)
 {
