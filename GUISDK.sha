@@ -5,7 +5,7 @@ Add(MainForm,2953706,7,21)
  Left=10
  Top=100
  Width=271
- Height=461
+ Height=485
  Ctl3D=0
  Caption="SDK_GUI"
  BorderStyle=3
@@ -15,7 +15,7 @@ Add(MainForm,2953706,7,21)
 Add(Button,11367918,483,161)
 {
  Top=295
- Width=200
+ Width=150
  Enabled=1
  Ctl3D=0
  Caption="Location"
@@ -278,10 +278,11 @@ Add(FormatStr,5739677,1260,196)
  DataCount=4
  Mask="%1\%2.exe %3-%4 "
  Point(FString)
+ link(onFString,15829063:doEvent1,[(1380,202)(1380,83)])
  link(Str1,2963946:Var,[])
  link(Str2,3437572:Value,[(1273,163)(1099,163)(1099,251)(902,251)])
- link(Str3,15285949:Value,[(1280,155)(1215,155)(1215,261)(1175,261)])
- link(Str4,15914489:Right,[(1287,185)(860,185)])
+ link(Str3,7392770:Var2,[])
+ link(Str4,10561502:Var2,[])
 }
 Add(Memory,3437572,896,210)
 {
@@ -325,7 +326,7 @@ Add(StrPart,15914489,854,133)
  Point(Right)
  link(onPart,14284612:doSectionData,[])
 }
-Add(GlobalVar,2963946,1260,63)
+Add(GlobalVar,2963946,1260,42)
 {
  Name="pathcomp"
  Data=String(comp)
@@ -350,11 +351,11 @@ Add(StrCat,4102628,1323,252)
 {
  link(onStrCat,272112:doEvent1,[(1364,258)(1364,223)])
  link(Str1,1638113:Var3,[(1329,240)])
- link(Str2,16587980:String,[(1336,115)(382,115)(382,288)(244,288)])
+ link(Str2,5163245:Var2,[])
 }
 Add(StrCat,6578797,1260,308)
 {
- link(onStrCat,272112:doEvent2,[(1369,314)(1369,230)])
+ link(onStrCat,14638349:doEvent1,[])
  link(Str1,1638113:Var2,[])
 }
 Add(GetDataEx,1638113,1260,235)
@@ -405,33 +406,18 @@ BEGIN_SDK
    DataCount=1
    Width=1098
    Height=232
-   VOffset=200
-   HOffset=200
-   link(doWork1,10297772:doData,[(161,227)(161,377)])
+   VOffset=10
+   HOffset=100
+   link(doWork1,13071463:doGetString,[(64,37)(64,83)])
   }
-  Add(DoData,10297772,301,371)
+  Add(StrList,13071463,107,35)
   {
-   link(onEventData,12290566:doIndex,[])
-   link(Data,12854445:Data1,[(307,196)(227,196)])
-  }
-  Add(GetIndexData,12290566,343,371)
-  {
-   link(onIndex,1224100:doData,[(383,377)(383,440)])
-   link(Data1,10433454:Value,[])
-   link(Data2,13573790:Value,[(356,359)(384,359)])
-  }
-  Add(DoData,1224100,392,434)
-  {
-   link(onEventData,12854445:onEvent1,[(772,440)(772,227)])
-   link(Data,12290566:Var,[(398,408)(349,408)])
-  }
-  Add(Memory,13573790,378,315)
-  {
-   Default=String(-draft)
-  }
-  Add(Memory,10433454,343,315)
-  {
-   Default=String()
+   Strings=#0:|6:-draft|
+   Point(onGetString)
+   Point(IdxToSelect)
+   Point(doGetString)
+   link(onGetString,12854445:onEvent1,[(629,48)(629,37)])
+   link(IdxToSelect,12854445:Data1,[(127,28)(127,28)])
   }
 END_SDK
 Add(CheckBox,7049416,567,252)
@@ -446,7 +432,7 @@ Add(WinExec,4464460,1491,210)
 {
  Param="cmd"
 }
-Add(ChildForm,2391399,1477,287)
+Add(ChildForm,2391399,1477,259)
 {
 }
 BEGIN_SDK
@@ -607,10 +593,10 @@ Add(StrCat,9643496,1029,133)
 Add(Label,16159088,7,70)
 {
  Left=135
- Top=418
+ Top=443
  Width=129
  Height=17
- Caption="Created by Graff46 v 0.9.6"
+ Caption="Created by Graff46 v 0.9.7"
 }
 Add(Replace,11282865,938,133)
 {
@@ -627,7 +613,7 @@ Add(CheckBox,1433242,553,91)
 }
 Add(MultiElement,15728940,553,133)
 {
- link(onEvent1,9530428:doEvent2,[(693,139)(693,349)])
+ link(onEvent1,13657102:doWork1,[])
  link(Data1,1433242:Checked,[])
 }
 BEGIN_SDK
@@ -638,33 +624,18 @@ BEGIN_SDK
    DataCount=1
    Width=1098
    Height=232
-   VOffset=200
+   VOffset=10
    HOffset=200
-   link(doWork1,8295365:doData,[(161,227)(161,377)])
+   link(doWork1,16281619:doGetString,[(115,37)(115,101)])
   }
-  Add(DoData,8295365,301,371)
+  Add(StrList,16281619,207,53)
   {
-   link(onEventData,13564697:doIndex,[])
-   link(Data,3373989:Data1,[(307,196)(227,196)])
-  }
-  Add(GetIndexData,13564697,343,371)
-  {
-   link(onIndex,5404994:doData,[(383,377)(383,440)])
-   link(Data1,6118772:Value,[])
-   link(Data2,6512548:Value,[(356,359)(384,359)])
-  }
-  Add(DoData,5404994,392,434)
-  {
-   link(onEventData,3373989:onEvent1,[(772,440)(772,227)])
-   link(Data,13564697:Var,[(398,408)(349,408)])
-  }
-  Add(Memory,6512548,378,315)
-  {
-   Default=String(-nosun)
-  }
-  Add(Memory,6118772,343,315)
-  {
-   Default=String()
+   Strings=#0:|6:-nosun|
+   Point(IdxToSelect)
+   Point(doGetString)
+   Point(onGetString)
+   link(IdxToSelect,3373989:Data1,[])
+   link(onGetString,3373989:onEvent1,[(680,66)(680,37)])
   }
 END_SDK
 Add(Hub,8673271,525,161)
@@ -692,37 +663,111 @@ BEGIN_SDK
    DataCount=1
    Width=1098
    Height=232
-   VOffset=200
-   HOffset=200
-   link(doWork1,10179740:doData,[(161,227)(161,377)])
+   VOffset=10
+   HOffset=100
+   link(doWork1,13746844:doGetString,[(64,37)(64,104)])
   }
-  Add(DoData,10179740,301,371)
+  Add(StrList,13746844,107,56)
   {
-   link(onEventData,9282512:doIndex,[])
-   link(Data,16338808:Data1,[(307,196)(227,196)])
-  }
-  Add(GetIndexData,9282512,343,371)
-  {
-   link(onIndex,15354729:doData,[(383,377)(383,440)])
-   link(Data1,2612270:Value,[])
-   link(Data2,12020556:Value,[(356,359)(384,359)])
-  }
-  Add(DoData,15354729,392,434)
-  {
-   link(onEventData,16338808:onEvent1,[(772,440)(772,227)])
-   link(Data,9282512:Var,[(398,408)(349,408)])
-  }
-  Add(Memory,12020556,378,315)
-  {
-   Default=String(-nosun)
-  }
-  Add(Memory,2612270,343,315)
-  {
-   Default=String()
+   Strings=#0:|6:-nosun|
+   Point(doGetString)
+   Point(onGetString)
+   Point(IdxToSelect)
+   link(onGetString,16338808:onEvent1,[(629,69)(629,37)])
+   link(IdxToSelect,16338808:Data1,[])
   }
 END_SDK
 Add(Hub,2357210,525,501)
 {
  link(onEvent1,1503176:doEvent5,[(735,507)(735,195)])
  link(onEvent2,6082876:doWork1,[(563,514)(563,461)])
+}
+Add(CheckBox,16046056,617,91)
+{
+ Left=155
+ Top=295
+ Width=50
+ Ctl3D=0
+ Caption="No rgb"
+}
+Add(MultiElement,13657102,616,133)
+{
+ link(onEvent1,9530428:doEvent2,[(700,139)(700,349)])
+ link(Data1,16046056:Checked,[(622,128)(623,128)])
+}
+BEGIN_SDK
+  Add(EditMulti,13414154,21,42)
+  {
+   EventCount=1
+   WorkCount=1
+   DataCount=1
+   Width=1098
+   Height=302
+   VOffset=200
+   HOffset=200
+   link(doWork1,14163690:doValue,[])
+  }
+  Add(StrCatDelim,12974617,287,207)
+  {
+   Delimiter=" "
+   link(onStrCatDlm,13414154:onEvent1,[(772,213)(772,248)])
+   link(Str1,14163690:Value,[(293,190)(262,190)(262,286)(146,286)])
+  }
+  Add(StrList,6881528,207,200)
+  {
+   Strings=#0:|6:-norgb|
+   Point(doGetString)
+   Point(IdxToSelect)
+   Point(onGetString)
+   link(IdxToSelect,13414154:Data1,[])
+   link(onGetString,12974617:doStrCatDlm,[])
+  }
+  Add(Memory,14163690,140,242)
+  {
+   link(onData,6881528:doGetString,[])
+  }
+END_SDK
+Add(Edit,13481100,1512,77)
+{
+ Left=-5
+ Top=420
+ Width=272
+ Ctl3D=1
+ Text=""
+ ReadOnly=0
+}
+Add(FormatStr,12720340,1463,77)
+{
+ DataCount=3
+ Mask="%1 -%2 %3"
+ link(onFString,13481100:doText,[])
+ link(Str1,7392770:Var1,[(1469,65)(1280,65)])
+ link(Str2,10561502:Var1,[(1476,65)(1287,65)])
+ link(Str3,5163245:Var1,[(1483,65)(1336,65)])
+}
+Add(GetDataEx,7392770,1274,150)
+{
+ Angle=3
+ link(Data,15285949:Value,[(1215,155)(1215,261)(1175,261)])
+}
+Add(GetDataEx,10561502,1281,180)
+{
+ Angle=3
+ link(Data,15914489:Right,[(860,185)])
+}
+Add(GetDataEx,5163245,1330,110)
+{
+ Angle=3
+ link(Data,16587980:String,[(382,115)(382,288)(244,288)])
+}
+Add(Hub,14638349,1323,308)
+{
+ link(onEvent1,15829063:doEvent2,[(1415,314)(1415,90)])
+ link(onEvent2,272112:doEvent2,[(1370,321)(1370,230)])
+}
+Add(Hub,15829063,1435,77)
+{
+ InCount=2
+ OutCount=1
+ link(onEvent1,12720340:doString,[])
 }
