@@ -5,7 +5,7 @@ Add(MainForm,2953706,7,21)
  Left=10
  Top=100
  Width=271
- Height=485
+ Height=460
  Ctl3D=0
  Caption="SDK_GUI"
  BorderStyle=3
@@ -61,7 +61,7 @@ Add(Button,8443243,483,364)
 Add(Button,5348494,480,501)
 {
  Top=395
- Width=200
+ Width=150
  Enabled=1
  Ctl3D=0
  Caption="Detail"
@@ -72,7 +72,7 @@ Add(Button,5348494,480,501)
 }
 Add(Button,507633,567,0)
 {
- Left=145
+ Left=130
  Top=5
  Width=45
  Height=40
@@ -84,7 +84,7 @@ Add(Button,507633,567,0)
 }
 Add(Button,15157081,567,49)
 {
- Left=75
+ Left=195
  Top=5
  Width=45
  Height=40
@@ -113,7 +113,7 @@ Add(ListBox,16587980,217,231)
 {
  Top=50
  Width=265
- Height=235
+ Height=240
  Ctl3D=1
  Point(String)
  link(onClick,11503659:doData,[])
@@ -278,7 +278,6 @@ Add(FormatStr,5739677,1260,196)
  DataCount=4
  Mask="%1\%2.exe %3-%4 "
  Point(FString)
- link(onFString,15829063:doEvent1,[(1380,202)(1380,83)])
  link(Str1,2963946:Var,[])
  link(Str2,3437572:Value,[(1273,163)(1099,163)(1099,251)(902,251)])
  link(Str3,7392770:Var2,[])
@@ -355,7 +354,7 @@ Add(StrCat,4102628,1323,252)
 }
 Add(StrCat,6578797,1260,308)
 {
- link(onStrCat,14638349:doEvent1,[])
+ link(onStrCat,272112:doEvent2,[(1358,314)(1358,230)])
  link(Str1,1638113:Var2,[])
 }
 Add(GetDataEx,1638113,1260,235)
@@ -370,7 +369,7 @@ Add(DoData,13459605,630,364)
 Add(Hub,272112,1379,217)
 {
  InCount=2
- link(onEvent1,2918078:doEvent2,[])
+ link(onEvent1,2918078:doEvent1,[])
  link(onEvent2,8486455:doClear,[(1403,230)(1403,109)(1104,109)(1104,146)])
 }
 Add(Hub,103431,1078,161)
@@ -428,11 +427,11 @@ Add(CheckBox,7049416,567,252)
  Ctl3D=0
  Caption="Draft"
 }
-Add(WinExec,4464460,1491,210)
+Add(WinExec,4464460,1757,224)
 {
  Param="cmd"
 }
-Add(ChildForm,2391399,1477,259)
+Add(ChildForm,2391399,1610,350)
 {
 }
 BEGIN_SDK
@@ -492,11 +491,10 @@ Add(GlobalVar,14487960,798,0)
  Name="pathsdk"
  Data=String(sdk)
 }
-Add(Hub,2918078,1435,210)
+Add(Hub,2918078,1414,217)
 {
- InCount=2
- OutCount=1
- link(onEvent1,4464460:doExec,[])
+ link(onEvent1,12720340:doString,[(1435,223)(1435,83)])
+ link(onEvent2,12091869:doValue,[])
 }
 Add(Hub,13195414,700,35)
 {
@@ -578,7 +576,7 @@ Add(Hub,11224024,966,35)
 {
  InCount=2
  OutCount=1
- link(onEvent1,2918078:doEvent1,[(1364,41)(1364,216)])
+ link(onEvent1,5523612:doEvent1,[(1709,41)(1709,223)])
 }
 Add(Case,1332,987,133)
 {
@@ -590,13 +588,13 @@ Add(StrCat,9643496,1029,133)
  Str1="-"
  link(onStrCat,103431:doEvent1,[(1069,139)(1069,167)])
 }
-Add(Label,16159088,7,70)
+Add(Label,16159088,8,70)
 {
  Left=135
- Top=443
+ Top=418
  Width=129
  Height=17
- Caption="Created by Graff46 v 0.9.7"
+ Caption="Created by Graff46 v 0.9.8"
 }
 Add(Replace,11282865,938,133)
 {
@@ -652,7 +650,7 @@ Add(CheckBox,709307,588,413)
 }
 Add(MultiElement,6082876,588,455)
 {
- link(onEvent1,9530428:doEvent3,[(754,461)(754,356)])
+ link(onEvent1,15555494:doWork1,[])
  link(Data1,709307:Checked,[])
 }
 BEGIN_SDK
@@ -727,23 +725,14 @@ BEGIN_SDK
    link(onData,6881528:doGetString,[])
   }
 END_SDK
-Add(Edit,13481100,1512,77)
-{
- Left=-5
- Top=420
- Width=272
- Ctl3D=1
- Text=""
- ReadOnly=0
-}
-Add(FormatStr,12720340,1463,77)
+Add(FormatStr,12720340,1442,77)
 {
  DataCount=3
  Mask="%1 -%2 %3"
- link(onFString,13481100:doText,[])
- link(Str1,7392770:Var1,[(1469,65)(1280,65)])
- link(Str2,10561502:Var1,[(1476,65)(1287,65)])
- link(Str3,5163245:Var1,[(1483,65)(1336,65)])
+ Point(FString)
+ link(Str1,7392770:Var1,[(1448,65)(1280,65)])
+ link(Str2,10561502:Var1,[(1455,65)(1287,65)])
+ link(Str3,5163245:Var1,[(1462,65)(1336,65)])
 }
 Add(GetDataEx,7392770,1274,150)
 {
@@ -760,14 +749,107 @@ Add(GetDataEx,5163245,1330,110)
  Angle=3
  link(Data,16587980:String,[(382,115)(382,288)(244,288)])
 }
-Add(Hub,14638349,1323,308)
+Add(Button,3949858,1659,266)
 {
- link(onEvent1,15829063:doEvent2,[(1415,314)(1415,90)])
- link(onEvent2,272112:doEvent2,[(1370,321)(1370,230)])
+ Left=10
+ Top=5
+ Width=110
+ Ctl3D=0
+ Caption="Open config"
+ Data=String(.\\guiconf.ini)
+ Flat=0
+ link(onClick,4464460:doShellExec,[(1699,272)(1699,237)])
 }
-Add(Hub,15829063,1435,77)
+Add(CheckBox,13613082,1484,161)
+{
+ Left=10
+ Top=30
+ Width=115
+ Ctl3D=0
+ Caption="Check CMD params"
+}
+Add(Message,10927409,1533,238)
+{
+ Caption="CMD params"
+ Type=1
+ Icon=2
+ link(onMessage,16467738:doCompare,[])
+ link(Message,12720340:FString,[(1539,118)(1448,118)])
+}
+Add(IndexToChanel,13847614,1484,224)
+{
+ Point(Index)
+ link(onEvent1,9740306:doEvent1,[])
+ link(onEvent2,10927409:doMessage,[(1524,237)(1524,244)])
+ link(Index,13613082:Checked,[])
+}
+Add(Hub,9740306,1624,224)
 {
  InCount=2
  OutCount=1
- link(onEvent1,12720340:doString,[])
+ link(onEvent1,10325104:doData,[])
+}
+Add(If_else,16467738,1576,238)
+{
+ Op2=Integer(1)
+ link(onTrue,9740306:doEvent2,[(1616,244)(1616,237)])
+}
+Add(DoData,10325104,1659,224)
+{
+ link(onEventData,5523612:doEvent2,[])
+ link(Data,12091869:Value,[(1665,214)(1646,214)(1646,278)(1448,278)])
+}
+Add(Memory,12091869,1442,224)
+{
+ link(onData,13847614:doEvent,[])
+}
+Add(Hub,5523612,1722,217)
+{
+ InCount=2
+ OutCount=1
+ link(onEvent1,4464460:doExec,[(1743,223)(1743,230)])
+}
+Add(MultiElement,15555494,637,455)
+{
+ link(onEvent1,9530428:doEvent3,[(779,461)(779,356)])
+ link(Data1,9415021:Checked,[])
+}
+BEGIN_SDK
+  Add(EditMulti,14168746,21,42)
+  {
+   EventCount=1
+   WorkCount=1
+   DataCount=1
+   Width=1098
+   Height=302
+   VOffset=200
+   HOffset=200
+   link(doWork1,1988554:doValue,[])
+  }
+  Add(StrCatDelim,643525,287,207)
+  {
+   Delimiter=" "
+   link(onStrCatDlm,14168746:onEvent1,[(772,213)(772,248)])
+   link(Str1,1988554:Value,[(293,190)(262,190)(262,286)(146,286)])
+  }
+  Add(StrList,6756237,207,200)
+  {
+   Strings=#0:|6:-norgb|
+   Point(doGetString)
+   Point(IdxToSelect)
+   Point(onGetString)
+   link(IdxToSelect,14168746:Data1,[])
+   link(onGetString,643525:doStrCatDlm,[])
+  }
+  Add(Memory,1988554,140,242)
+  {
+   link(onData,6756237:doGetString,[])
+  }
+END_SDK
+Add(CheckBox,9415021,637,413)
+{
+ Left=155
+ Top=395
+ Ctl3D=0
+ Caption="No rgb"
 }
