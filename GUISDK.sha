@@ -4,8 +4,8 @@ Add(MainForm,2953706,7,21)
 {
  Left=10
  Top=100
- Width=271
- Height=460
+ Width=226
+ Height=424
  Ctl3D=0
  Caption="SDK_GUI"
  BorderStyle=3
@@ -14,8 +14,8 @@ Add(MainForm,2953706,7,21)
 }
 Add(Button,11367918,483,161)
 {
- Top=295
- Width=150
+ Top=260
+ Width=100
  Enabled=1
  Ctl3D=0
  Caption="Location"
@@ -26,8 +26,8 @@ Add(Button,11367918,483,161)
 }
 Add(Button,9726664,484,221)
 {
- Top=320
- Width=200
+ Top=285
+ Width=160
  Enabled=1
  Ctl3D=0
  Caption="AI Map"
@@ -38,8 +38,8 @@ Add(Button,9726664,484,221)
 }
 Add(Button,2871973,481,306)
 {
- Top=345
- Width=265
+ Top=310
+ Width=220
  Enabled=1
  Ctl3D=0
  Caption="Verify"
@@ -50,8 +50,8 @@ Add(Button,2871973,481,306)
 }
 Add(Button,8443243,483,364)
 {
- Top=370
- Width=265
+ Top=335
+ Width=220
  Ctl3D=0
  Caption="Spawn"
  Data=Integer(1)
@@ -60,8 +60,8 @@ Add(Button,8443243,483,364)
 }
 Add(Button,5348494,480,501)
 {
- Top=395
- Width=150
+ Top=360
+ Width=100
  Enabled=1
  Ctl3D=0
  Caption="Detail"
@@ -72,7 +72,7 @@ Add(Button,5348494,480,501)
 }
 Add(Button,507633,567,0)
 {
- Left=130
+ Left=120
  Top=5
  Width=45
  Height=40
@@ -84,7 +84,7 @@ Add(Button,507633,567,0)
 }
 Add(Button,15157081,567,49)
 {
- Left=195
+ Left=170
  Top=5
  Width=45
  Height=40
@@ -112,8 +112,8 @@ Add(Replace,14895232,1113,210)
 Add(ListBox,16587980,217,231)
 {
  Top=50
- Width=265
- Height=240
+ Width=220
+ Height=205
  Ctl3D=1
  Point(String)
  link(onClick,11503659:doData,[])
@@ -421,8 +421,8 @@ BEGIN_SDK
 END_SDK
 Add(CheckBox,7049416,567,252)
 {
- Left=210
- Top=320
+ Left=170
+ Top=285
  Width=45
  Ctl3D=0
  Caption="Draft"
@@ -590,8 +590,8 @@ Add(StrCat,9643496,1029,133)
 }
 Add(Label,16159088,8,70)
 {
- Left=135
- Top=418
+ Left=90
+ Top=383
  Width=129
  Height=17
  Caption="Created by Graff46 v 0.9.8"
@@ -604,8 +604,8 @@ Add(Replace,11282865,938,133)
 }
 Add(CheckBox,1433242,553,91)
 {
- Left=210
- Top=295
+ Left=165
+ Top=260
  Ctl3D=0
  Caption="No sun"
 }
@@ -643,8 +643,8 @@ Add(Hub,8673271,525,161)
 }
 Add(CheckBox,709307,588,413)
 {
- Left=210
- Top=395
+ Left=165
+ Top=360
  Ctl3D=0
  Caption="No sun"
 }
@@ -682,8 +682,8 @@ Add(Hub,2357210,525,501)
 }
 Add(CheckBox,16046056,617,91)
 {
- Left=155
- Top=295
+ Left=110
+ Top=260
  Width=50
  Ctl3D=0
  Caption="No rgb"
@@ -751,7 +751,7 @@ Add(GetDataEx,5163245,1330,110)
 }
 Add(Button,3949858,1659,266)
 {
- Left=10
+ Left=5
  Top=5
  Width=110
  Ctl3D=0
@@ -762,7 +762,7 @@ Add(Button,3949858,1659,266)
 }
 Add(CheckBox,13613082,1484,161)
 {
- Left=10
+ Left=5
  Top=30
  Width=115
  Ctl3D=0
@@ -848,8 +848,8 @@ BEGIN_SDK
 END_SDK
 Add(CheckBox,9415021,637,413)
 {
- Left=155
- Top=395
+ Left=110
+ Top=360
  Ctl3D=0
  Caption="No rgb"
 }
