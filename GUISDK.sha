@@ -590,11 +590,11 @@ Add(StrCat,9643496,1029,133)
 }
 Add(Label,16159088,8,70)
 {
- Left=90
+ Left=70
  Top=383
- Width=129
+ Width=150
  Height=17
- Caption="Created by Graff46 v 0.9.8"
+ Caption="Created by Graff46 v 0.9.8 mini"
 }
 Add(Replace,11282865,938,133)
 {
